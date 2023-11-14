@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Register an Account</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Username" name="username">
+        <input type="password" placeholder="password" name="password">
+        <input type="password" placeholder="Repeat Password" name="r_password">
+        <input type="submit" value="Register">
+    </form>
+    {% if error_message %}
+    <p>{{error_message}}</p>
+    {% endif %}
+</body>
+</html>

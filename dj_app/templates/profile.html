@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ol>
+            {% for item in user_list %}
+            <li>User Name = {{item.client_name}}, Age = {{item.client_age}}, city = {{item.client_city}}, Food = {{item.client_food}}, Phone Number = {{item.client_phone}}, Image Name = {{item.client_image}}, <img src="{% static 'images/'|add:item.client_image %}" height="100" width="100"></li>
+            {% endfor %}
+        </ol>
+        <a href="/users_list">Go back to Users list</a>
+    </div>
+</body>
+</html>

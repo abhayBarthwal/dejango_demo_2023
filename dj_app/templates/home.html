@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+</head>
+<body>
+    <h1 id="home_welcome"> Welcome to my home page </h1>
+    <p>{{h_content}}</p>
+    <p>{{para_home}}</p>
+    <a href="{{home_anchor}}" target="_blank">Click here</a>
+    <img src="{% static 'images/class.jpg' %}" height="200" width="200">
+    <br>
+    <a href="/logout">Logout</a>
+</body>
+</html>

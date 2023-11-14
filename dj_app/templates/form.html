@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>User info Form</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" placeholder="User Name" name="u_name">
+            <input type="number" placeholder="User Age" name="u_age">
+            <input type="text" placeholder="User City" name="u_city">
+            <input type="text" placeholder="User Food" name="u_food">
+            <input type="text" placeholder="User Phone" name="u_phone">
+            <input type="file" name="u_image"> 
+            <input type="submit" value="Submit">
+        </form>
+        <a href="/users_list">Go to Users list</a>
+    </div>
+</body>
+</html>

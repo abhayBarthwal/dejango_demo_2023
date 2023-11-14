@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ol>
+            {% for item in users_list %}
+            <li>User Name = {{item.client_name}}, Age = {{item.client_age}}, city = {{item.client_city}}, <a href="/profile/{{item.id}}">See User</a></li>
+            {% endfor %}
+        </ol>
+        <a href="/form">Submit another form</a>
+    </div>
+</body>
+</html>
